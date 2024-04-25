@@ -1,0 +1,41 @@
+<span>or use your email for registration</span>
+				<input type="text" placeholder="Name" name="username" />
+				<% if (errors && errors.length> 0) { %>
+					<span style="color: red;">
+						<% errors.forEach(error=> { %>
+							<% if(error.path==='username' ) {%>
+								<%= error.msg %>
+									<% } %>
+										<% }); %>
+					</span>
+					<% } %>
+						<input type="email" placeholder="Email" name="email" />
+						<% if (errors && errors.length> 0) { %>
+							<span style="color: red;">
+								<% errors.forEach(error=> { %>
+									<% if(error.path==='email' ) {%>
+										<%= error.msg %>
+											<% } %>
+												<% }); %>
+							</span>
+							<% } %>
+								<input type="text" placeholder="Phone" name="phone" />
+								<% if (errors && errors.length> 0) { %>
+									<span style="color: red;">
+										<% errors.forEach(error=> { %>
+											<% if(error.path==='phone' ) {%>
+												<%= error.msg %>
+													<% } %>
+														<% }); %>
+									</span>
+									<% } %>
+										<input type="password" placeholder="Password" name="password" />
+										<% if (errors && errors.length> 0) { %>
+											<span style="color: red;">
+												<% errors.forEach(error=> { %>
+													<% if(error.path==='password' ) {%>
+														<%= error.msg %>
+															<% } %>
+																<% }); %>
+											</span>
+											<% } %>

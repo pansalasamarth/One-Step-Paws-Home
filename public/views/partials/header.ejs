@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cake</title>
+
+    <!-- swiper link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- cdn icon link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file  -->
+    <link rel="stylesheet" href="/assets/css/header.css">
+
+</head>
+
+<body>
+ 
+ <!-- header section start here  -->
+ <header class="header">
+    <div class="logoContent">
+        <a href="#" class="logo"><img src="/images/m-1.png" alt=""></a>
+        <h1 class="logoName">Maavdi Sweets and Namkeens </h1>
+    </div>
+
+    <% if(user_id) {%>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#product">product</a>
+        <a href="#blogs">blogs</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="userProfile">Dashboard</a>
+    </nav>
+   <% } else { %>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#product">product</a>
+        <a href="#blogs">blogs</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="../login">Login</a>
+        <a href="../register">Register</a>
+
+    </nav>
+   <% } %>
+
+    <!-- <div class="icon">
+        <i class="fas fa-search" id="search"></i>
+        <i class="fas fa-bars" id="menu-bar"></i> 
+    </div> -->
+  
+    <a href="/logout">Logout</a>
+
+    <% if(user_id) {%>
+    <h1 class="logoName"><%= user_id.username %></h1>
+    <% } %>
+
+    <div class="search">
+        <input type="search" placeholder="search...">
+    </div>
+</header>
+
+<!-- header section end here  -->
+
+<!-- <script src="/js/header.js"></script> -->
+
+</body>
+</html>

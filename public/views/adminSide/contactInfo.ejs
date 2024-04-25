@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Info</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/sidebar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="/assets/images/logo.jpg" alt="Logo">
+                        <span class="title">One Step Paws</span>    
+                    </a>
+                </li>
+                <li>
+                    <a href="usersInfo">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Users</span>    
+                    </a>
+                </li>
+            
+            
+                <li>
+                    <a href="serviceInfo">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Services</span>    
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contactInfo">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Contact</span>    
+                    </a>
+                </li>
+            </ul>
+        </div>
+            <!--main-  -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!-- search -->
+                <!-- <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div> -->
+                <!-- userImg -->
+                <div>
+                    <h1 style="text-align: center;">
+                <%    if(adminInfo){ %>
+                        <%= adminInfo.username %>
+                <%    } %>
+                    </h1>
+                    <a href="/adminLogout">Logout</a>
+                    <!-- <img src="hellodog.jpg"> -->
+                </div>
+            </div>
+
+           
+
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeards">
+                        <h2>Users</h2>
+                        <!-- <a href="#" class="btn">View All</a> -->
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>Message</td>
+                            </tr>
+                        </thead>
+                        <% if(contact) { %>
+                            <% contact.forEach(element => { %>
+                        <tbody>
+                            <tr>
+                                <td><%= element.name %></td>
+                                <td><%= element.email %></td>
+                                <td><%= element.message %></td>
+                            </tr>
+                        </tbody>
+                        <% }); %>
+                        <% } %>
+                    </table>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        // MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function()
+        {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item)=>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item)=>
+         item.addEventListener('mouseover',activeLink));
+    </script>
+
+</body>
+</html>

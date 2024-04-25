@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/logo mini.jpg">
+    <link rel="stylesheet" href="/assets/css/aboutus.css">
+    <title>one step paws - About Us</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <img src="/assets/images/logo.jpg" alt="Logo">
+        <h2>One Step Paws</h2>
+        <% if(user_id) { %>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="aboutUs">ABOUT</a></li>
+                <li><a href="services"> SERVICE</a> </li>
+                <li><a href="contact">CONTACT US</a></li>
+                <li><a href="userProfile">DASHBOARD</a></li>
+                <li><a href="logout">LOGOUT</a></li>
+                <a class="btn" href="bookService">
+                  <ion-icon name="bag-check-outline"></ion-icon>BOOK NEW </a>
+            </ul>
+            <% } else { %>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="aboutUs">ABOUT</a></li>
+                    <li><a href="services"> SERVICE</a> </li>
+                    <li><a href="contact">CONTACT US</a></li>
+                    <li><a href="login">LOG IN</a></li>
+                    <li><a href="register">REGISTRATION</a></li>
+                </ul>
+            <% } %>
+         
+      </div>
+
+      <div class="content">
+        <h1>ABOUT AS</h1>
+        <p>At One Step Paws, we understand that every dog is unique, which is
+          why we offer
+          a range of specialized services <br> tailored to meet the individual
+          needs of your beloved
+          companion. Our commitment to excellence ensures that your <br> dog
+          receives the highest quality
+          care, attention, and support, no matter their age, size, or
+          breed.Treat your pup to <br> the
+          ultimate pampering experience with our professional grooming
+          services.</p>
+        <button class="btn">Read More</button>
+        <h1>VISION</h1>
+        <p>Our vision is to create a great reputation that shows our dedication
+          to our clients and their pets. Our desire is to become <br> the first
+          recommendation for services by your veterinarian, groomer, and friends
+          and family.</p>
+        <h1>MISSION</h1>
+        <p>Our mission is to provide top-quality, royal treatment to the pets we
+          care for, giving the owner peace of mind about their pets <br>
+          welfare and happiness during their stay at the kennel. Also continuing
+          on a path of never ending education in the pet care industry.</p>
+      </div>
+
+      <br><br>
+      <br><br>
+      <br><br>
+
+      <br><br>
+      <br><br>
+      <br><br>
+
+      <!--     footer      -->
+      <footer>
+        <div class="footer-content">
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Service Information</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <img class="logo" src="/assets/images/logo.jpg" alt="" width="100">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong> 160 Luxury Villa, Surat - 395008</p>
+                <p><strong>Phone: </strong> (+91) 9265849179</p>
+                <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+            </div>
+        </div>
+    </div>
+        <div class="footer-bottom">
+            &copy; 2024 One Step Paws
+        </div>
+</footer>
+
+    </div>
+    <script type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY</title>
+    <link rel="stylesheet" href="/assets/css/bookService.css">
+
+    <script>
+   
+  function printSelection() {
+      var dropdown = document.getElementById("service");
+      var selectedOption = service.options[service.selectedIndex].text;
+      var selectedPrice = service.options[service.selectedIndex].getAttribute('data-price');
+      document.getElementById("selectedOption").textContent = "Selected Service: " + selectedOption;
+      document.getElementById("selectedOption2").textContent = "Price: ₹" + selectedPrice;
+
+      document.getElementById("priceInput").value = selectedPrice;
+    } 
+
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <img src="/assets/images/logo.jpg" alt="Logo">
+        <h2>one step paws</h2>
+        <% if(user_id) { %>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="aboutUs">ABOUT</a></li>
+                <li><a href="services"> SERVICE</a> </li>
+                <li><a href="contact">CONTACT US</a></li>
+                <li><a href="userProfile">DASHBOARD</a></li>
+                <li><a href="logout">LOGOUT</a></li>
+                <a class="btn" href="bookService">
+                    <ion-icon name="bag-check-outline"></ion-icon>BOOK NEW </a>
+            </ul>
+            <% } else { %>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="aboutUs">ABOUT</a></li>
+                    <li><a href="services"> SERVICE</a> </li>
+                    <li><a href="contact">CONTACT US</a></li>
+                    <li><a href="login">LOG IN</a></li>
+                    <li><a href="register">REGISTRATION</a></li>
+                </ul>
+            <% } %>
+       
+      </div>
+<div class="hero">
+<form method="post" action="addService">
+      <div class="data">
+        
+        <label>Name :</label>
+        <input type="text" name="name" value=<%= user_id.username %>>
+
+        <label>E-mail :</label>
+        <input type="text" name="email" value=<%= user_id.email %>>
+
+        <label>Phone Number :</label>
+        <input type="text" name="phone" value=<%= user_id.phone %>>
+
+        <label>Address :</label>
+        <input type="text" name="address">
+
+        <label>Dog breed :</label>
+        <input type="text" name="breed">
+
+        
+        
+      </div>
+      <div class="data2">
+
+        <label for="service">Service:</label>
+        <select id="service" name="service" onchange="printSelection()"
+          required>
+          <option value>Select service</option>
+          <option value="Theme based pet care event" data-price="499">Theme based pet care event</option>
+          <option value="Pet adventure trip" data-price="649">Pet adventure trip</option>
+          <option value="Holistic wellness woekshop" data-price="299">Holistic wellness woekshop</option>
+          <option value="Art & Craft" data-price="349">Art & Craft</option>
+          <option value="Art & Craft" data-price="6999">Events and parties</option>
+          <option value="Nutrition counselling" data-price="399">Nutrition counselling</option>
+          <option value="Dog IQ testing" data-price="299">Dog IQ testing</option>
+          <option value="Story telling/cartoon films" data-price="199">Story telling/cartoon films</option>
+          <option value="Training" data-price="14,999(PER MONTH)">Training </option>
+          <option value="Swimming pool/bathing" data-price="499">Swimming pool/bathing</option>
+          <option value="Photography" data-price="1,099">Photography</option>
+          <option value="Breeding" data-price="FREE">Breeding</option>
+          <option disabled></option>
+          <option value="Grooming" disabled>Grooming</option>
+          <option value="Grooming small"data-price="999">Grooming Small</option>
+          <option value="Grooming Large"data-price="1,411">Grooming Large</option>
+          <option disabled></option>
+          <option value="Dog care" disabled>Dog care</option>
+          <option value="Dog care(HALF DAY 12 HRS without food)" data-price="399">Dog Care( Half Day 12 HRS without food )</option>
+          <option value="Dog care(HALF DAY 12 HRS with food)" data-price="499">Dog Care( Half Day 12 HRS with food )</option>
+          <option value="Dog care(HALF DAY 24 HRS without food)" data-price="699">Dog Care( Half Day 24 HRS without food )</option>
+          <option value="Dog care(HALF DAY 24 HRS with food)" data-price="799">Dog Care( Half Day 24 HRS with food )</option>
+          <option value="Dog care(Street DAY 12 HRS)"data-price="399">Dog Care( Street DAY 12 HRS)</option>
+          <option value="Dog care(Street DAY 24 HRS)"data-price="699">Dog Care( Street DAY 24 HRS)</option>
+          <option disabled></option>
+          <option value="Dog taxi" data-price="1KM - RS 20">Dog taxi</option>
+        </select>
+
+        <label for="note">special Note</label>
+        <textarea name="note" id="note" cols="30" rows="14"></textarea>
+      </div>
+      <p id="selectedOption"></p>
+      <p id="selectedOption2"  name="price"> </p>
+      
+      <input type="hidden" name="price"   id="priceInput" readonly>
+      <input type="hidden" name="userId" value= <%=user_id._id %> > 
+
+<button class="button-9">Book service</button>
+</form>    
+</div>
+    </div>
+  </body>
+</html>

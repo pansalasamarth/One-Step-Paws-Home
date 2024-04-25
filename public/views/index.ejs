@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/logo mini.jpg">
+    <title>one step paws-Home</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <img src="/assets/images/logo.jpg" alt="Logo">
+            <h2>One Step Paws</h2>
+            <div id="navbar">
+                <% if(user_id) { %>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="aboutUs">ABOUT</a></li>
+                    <li><a href="services"> SERVICE</a> </li>
+                    <li><a href="contact">CONTACT US</a></li>
+                    <li><a href="userProfile">DASHBOARD</a></li>
+                    <li><a href="logout">LOGOUT</a></li>
+                    <li><a class="btn" href="bookService"><ion-icon name="bag-check-outline"></ion-icon> BOOK NEW</a></li>
+                </ul>
+                <% } else { %>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="aboutUs">ABOUT</a></li>
+                    <li><a href="services"> SERVICE</a> </li>
+                    <li><a href="contact">CONTACT US</a></li>
+                    <li><a href="login">LOG IN</a></li>
+                    <li><a href="register">REGISTRATION</a></li>
+                </ul>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="content-hero">
+            <h1>Local Pet Care<br>Services</h1>
+            <p>Welcome to our dog-loving heaven, where wagging tails and wet noses around.<br>
+                Unleash joy and tail-wagging adventures with our dog-friendly community.</p>
+            <button class="btn">Book service</button>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="logo" src="/assets/images/logo.jpg" alt="" width="100">
+                    <h4>Contact</h4>
+                    <p><strong>Address: </strong> 160 Luxury Villa, Surat - 395008</p>
+                    <p><strong>Phone: </strong> (+91) 9265849179</p>
+                    <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+                </div>
+            </div>
+        </footer>
+            <div class="footer-bottom">
+                &copy; 2024 One Step Paws
+            </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

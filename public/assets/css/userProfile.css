@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+.hade {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 80px;
+    background: #E3E6F3;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 70px;
+}
+
+.hade img {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+
+.hade h2 {
+    font-size: 30px;
+    margin-top: 0px;
+    color: black;
+    font-family: "Poppins",sans-serif;
+}
+
+.hade ul {
+    display: flex;
+    margin-top: 10px;
+}
+
+.hade ul li {
+    font-family: Arial;
+    color: #2b9ec2;
+    list-style: none;
+    margin-right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hade ul li a:hover,
+.hade ul li a.active {
+    color: rgb(3, 86, 57);
+}
+
+.hade .btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 18px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    transition: 0.5s;
+}
+
+.hade .btn:hover {
+    color: #2b9ec2;
+    background-color: #fff;
+}
+
+.hello {
+    width: 100%;
+    /* height: 100%; */
+    background:linear-gradient(to Left, rgba(0,0,0,0.5)50% ,rgba(0,0,0,0.5)50%), url(/assets/images/dog1.jpeg) ;
+    background-size: cover; 
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding-top: 30px;
+    /* background-color: red; */
+}
+
+.userinfo {
+    background-color: #615e5e86;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px;
+    /* justify-content: center; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+
+.userinfo h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.userinfo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.userinfo table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.userinfo td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.userinfo .def {
+    font-weight: bold;
+    color: #fff;
+}
+
+.userinfo .data {
+    color: #f8f6f6d9;
+}
+
+
+        .serviceinfo {
+            /* margin-top: 20px; */
+            margin-top: 90px;
+            width: 95%;
+        }
+        
+        .serviceinfo h1 {
+            height: 43px;
+    width: 100%;
+    font: 36px;
+    font-family: Poppins,sans-serif;
+    margin: 0px 0px 25px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .table-striped tbody tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        .rounded-image {
+            border-radius: 50%; 
+            width: 150px; 
+            height: 150px;
+            object-fit: cover;
+        }
+        .data{
+            font-weight: bold;
+        }
+
+/* f */
+footer {
+    margin-top: 800px;
+    background-color: #088178;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style-type: none; /* Remove bullets from the list */
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+    list-style-type: none;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+    padding: 3px 0;
+    border-bottom: 1px solid transparent;
+}
+
+footer ul li a:hover {
+    color: #2b9ec2;
+    border-bottom-color: #2b9ec2;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #E3E6F3;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
