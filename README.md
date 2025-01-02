@@ -11,7 +11,6 @@
 -   [Usage](#usage)
 -   [Database Models](#database-models)
 -   [Contributing](#contributing)
--   [License](#license)
 
 ----------
 
